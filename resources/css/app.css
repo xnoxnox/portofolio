@@ -1,0 +1,29 @@
+
+@import "tailwindcss";
+
+/* Smooth scrolling */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Prevent content from hiding behind sticky navigation */
+section[id] {
+    scroll-margin-top: 90px;
+}
+
+/* Selection color */
+::selection {
+    background: #2563eb;
+    color: #ffffff;
+}
+
+/* Skill Tags */
+@layer components {
+    .skill-tag {
+        @apply rounded-lg border border-white/10 bg-slate-800/70 px-3 py-2 text-xs font-medium text-slate-300 transition duration-300;
+    }
+
+    .skill-tag:hover {
+        @apply border-blue-500/40 bg-blue-500/10 text-blue-300;
+    }
+}
